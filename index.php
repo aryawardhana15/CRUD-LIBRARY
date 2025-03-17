@@ -2,7 +2,7 @@
 include 'koneksi.php';
 
 // Pagination
-$limit = 5; // Jumlah data per halaman
+$limit = 6; // Jumlah data per halaman
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($page - 1) * $limit;
 
@@ -29,7 +29,7 @@ $result = mysqli_query($koneksi, $query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Buku</title>
+    <title>perpustakaan Mini</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
@@ -82,7 +82,7 @@ $result = mysqli_query($koneksi, $query);
             <?php endwhile; ?>
         </div>
 
-        
+
         <!-- Pagination -->
         <div class="flex justify-center mt-6">
             <?php if ($page > 1): ?>
